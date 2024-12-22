@@ -9,7 +9,7 @@ const App = () => {
     const [timestampHistory, setTimestampHistory] = useState([]);
 
     useEffect(() => {
-        const socket = io("http://localhost:4000");
+        const socket = io("https://real-time-financial-dashboard.onrender.com");
         socket.on("financialData", (data) => {
             setRealTimeData(data);
             setPriceHistory((prev) => [...prev, parseFloat(data.price)]);
