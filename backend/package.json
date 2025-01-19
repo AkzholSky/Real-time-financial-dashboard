@@ -17,6 +17,7 @@
     "express": "^4.21.2",
     "http": "^0.0.1-security",
     "mongoose": "^8.8.3",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "yahoo-finance2": "^2.13.3"
   }
 }

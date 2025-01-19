@@ -1,13 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure bootstrap is loaded globally
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import App from "./App";
+import "./index.css"; // Optional: Ensure the path is correct
 
-// Create a root for React and render the App component
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// Get the root DOM element
+const rootElement = document.getElementById("root");
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Create the React root and render the App component
+if (rootElement) {
+    const root = createRoot(rootElement);
+    root.render(<App />);
+} else {
+    console.error("Root element not found!");
+}
